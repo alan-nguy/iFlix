@@ -20,16 +20,16 @@ html {
   color: #333;
 }
 
-.home-info {
+.home-interface {
   background-color: rgba(220, 220, 220, .7);
   padding: 15px 30px;
   border-radius: 5px;
 }
 
-.title {
+.home-title {
   color: #B10DC9;
   font-family: Skia;
-  font-weight: normal;
+  /*font-weight: normal;*/
 }
 
 .search {

@@ -1,11 +1,36 @@
 const React = require('react');
 const ReactDOM = require("react-dom");
-const MyTitle = require("./MyTitle");
+const {Router, Route, IndexRoute, hashHistory} = require("react-router");
+const { shows } = require("../public/data");
+const Landing = require("./Landing.jsx");
+const Search = require("./Search.jsx");
+const Layout = require("./Layout.jsx");
+const Details = require("./Details");
 
-const MyFirstComponent = () => {
-  return (
-    <h1>hi</h1>
-  )
-};
+const App = React.createClass ({
+  assignShow (nextState, replace) {
+    const showArray = shows.filter((show) => {
+      return (show.imdbID === nextState.id);
+    })
 
-ReactDOM.render(<MyFirstComponent />, document.getElementById('app'));
+    if (showArray.length < 1) {
+      return replace("/");
+    }
+
+    Object.assign(nextState.params, showArray[0]);
+    return nextState;
+  },
+  render() {
+    return (
+      <Router history={hashHistory}>
+        <Route path="/" component={Layout}>
+          <IndexRoute component={Landing} />
+          <Route path="/search" component={Search} shows={shows} />
+          <Route path="/details/:id" component={Details} onEnter={this.assignShow} />
+        </Route>
+      </Router>
+    )
+  }
+});
+
+ReactDOM.render(<App />, document.getElementById("app"));
