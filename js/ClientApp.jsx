@@ -8,16 +8,17 @@ const Layout = require("./Layout.jsx");
 const Details = require("./Details");
 
 const App = React.createClass ({
-  assignShow (nextState, replace) {
+  assignShow(nextState, replace) {
     const showArray = shows.filter((show) => {
-      return (show.imdbID === nextState.id);
+      return (show.imdbID === nextState.params.id);
     })
-
+    console.log(showArray);
     if (showArray.length < 1) {
       return replace("/");
     }
 
     Object.assign(nextState.params, showArray[0]);
+    console.log(nextState);
     return nextState;
   },
   render() {
