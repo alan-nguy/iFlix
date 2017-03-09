@@ -27576,7 +27576,7 @@
 	      React.createElement(
 	        "h1",
 	        { className: "home-title" },
-	        "hi"
+	        "iFlix"
 	      ),
 	      React.createElement(
 	        "form",
@@ -27744,7 +27744,7 @@
 	        React.createElement(
 	          Link,
 	          { to: "/", className: "brand-link" },
-	          "hi"
+	          "iFlix"
 	        )
 	      ),
 	      utilSpace
@@ -27772,12 +27772,6 @@
 	    );
 	  }
 	});
-
-	// const {element} = React.PropTypes;
-
-	// Layout.propTypes = {
-	//   children: element
-	// }
 
 	module.exports = Layout;
 

@@ -14,7 +14,7 @@ const Landing = React.createClass({
   render() {
     return (
       <div className="home-interface">
-        <h1 className="home-title">hi</h1>
+        <h1 className="home-title">iFlix</h1>
         <form onSubmit={this.goToSearch}>
           <input value={this.props.searchTerm} onChange={this.handleSearchTermEvent} className="search" type="text" placeholder="Search" />
         </form>

@@ -10,10 +10,4 @@ const Layout = React.createClass({
   }
 });
 
-// const {element} = React.PropTypes;
-
-// Layout.propTypes = {
-//   children: element
-// }
-
 module.exports = Layout;

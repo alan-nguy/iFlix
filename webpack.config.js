@@ -1,5 +1,4 @@
 module.exports = {
-  context: __dirname,
   entry: "./js/ClientApp.jsx",
   output: {
     path: __dirname,

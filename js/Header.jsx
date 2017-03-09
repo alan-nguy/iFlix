@@ -27,7 +27,7 @@ const Header = React.createClass({
     return (
       <header className="header">
         <h1 className="brand">
-          <Link to="/" className="brand-link">hi</Link>
+          <Link to="/" className="brand-link">iFlix</Link>
         </h1>
         {utilSpace}
       </header>
