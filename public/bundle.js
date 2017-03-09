@@ -27661,7 +27661,7 @@
 	      React.createElement(
 	        "div",
 	        { className: "show-card" },
-	        React.createElement("img", { src: "public/img/posters/" + this.props.poster, className: "show-card-img" }),
+	        React.createElement("img", { src: "/img/posters/" + this.props.poster, className: "show-card-img" }),
 	        React.createElement(
 	          "div",
 	          { className: "show-card-text" },
@@ -27833,7 +27833,7 @@
 	            { className: "video-year" },
 	            year
 	          ),
-	          React.createElement("img", { className: "video-poster", src: "public/img/posters/" + poster }),
+	          React.createElement("img", { className: "video-poster", src: "/img/posters/" + poster }),
 	          React.createElement(
 	            "p",
 	            { className: "video-description" },
